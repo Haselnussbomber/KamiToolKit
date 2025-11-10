@@ -61,6 +61,8 @@ public abstract unsafe partial class NodeBase {
     }
 
     internal void DetachNode() {
+        var parentAddon = ParentAddon;
+
         NodeLinker.DetachNode(InternalResNode);
         InternalResNode->ParentNode = null;
 
@@ -72,9 +74,9 @@ public abstract unsafe partial class NodeBase {
             ParentUldManager = null;
         }
 
-        if (ParentAddon is not null) {
-            ParentAddon->UldManager.UpdateDrawNodeList();
-            ParentAddon->UpdateCollisionNodeList(false);
+        if (parentAddon is not null) {
+            parentAddon->UldManager.UpdateDrawNodeList();
+            parentAddon->UpdateCollisionNodeList(false);
         }
     }
 
