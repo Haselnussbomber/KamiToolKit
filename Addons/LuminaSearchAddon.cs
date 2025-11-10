@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using KamiToolKit.Addons.Parts;
 using Lumina.Excel;
 
 namespace KamiToolKit.Addons;
 
-public class LuminaSearchAddon<T> : BaseSearchAddon<T> where T : struct, IExcelRow<T> {
+[AutoConstruct]
+public partial class LuminaSearchAddon<T> : BaseSearchAddon<T> where T : struct, IExcelRow<T> {
 
     public required Func<T, string> GetLabelFunc { get; init; }
     public Func<T, string>? GetSubLabelFunc { get; init; }

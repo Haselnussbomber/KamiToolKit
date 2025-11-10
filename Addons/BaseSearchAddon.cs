@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -10,7 +10,8 @@ using KamiToolKit.Widgets;
 
 namespace KamiToolKit.Addons;
 
-public abstract class BaseSearchAddon<T> : NativeAddon {
+[AutoConstruct]
+public abstract partial class BaseSearchAddon<T> : NativeAddon {
     
     private SearchWidget? searchWidget;
     private ScrollingAreaNode<VerticalListNode>? listNode;

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Numerics;
 using Dalamud.Interface;
 using FFXIVClientStructs.FFXIV.Component.GUI;
@@ -8,7 +8,8 @@ using KamiToolKit.Widgets;
 
 namespace KamiToolKit.Addons;
 
-public class ColorPickerAddon : NativeAddon {
+[AutoConstruct]
+public partial class ColorPickerAddon : NativeAddon {
     
     private ColorPickerWidget? colorPicker;
     

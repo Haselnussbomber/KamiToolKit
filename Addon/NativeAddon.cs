@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using FFXIVClientStructs.FFXIV.Client.UI;
@@ -9,6 +9,7 @@ using KamiToolKit.Nodes;
 
 namespace KamiToolKit.Addon;
 
+[AutoConstruct]
 public abstract unsafe partial class NativeAddon {
 
     private GCHandle? disposeHandle;

@@ -1,1 +1,2 @@
-﻿global using KamiToolKit.Extensions;
+global using AutoCtor;
+global using KamiToolKit.Extensions;

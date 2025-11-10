@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Numerics;
 using System.Text.Json;
@@ -114,13 +114,13 @@ public abstract unsafe partial class NativeAddon {
     public void SetWindowSize(float width, float height)
         => SetWindowSize(new Vector2(width, height));
 
-    public required string InternalName { get; init; } = "NameNotSet";
+    public string InternalName { get; set; } = "NameNotSet";
 
-    public required ReadOnlySeString Title { get; set; } = "TitleNotSet";
+    public ReadOnlySeString Title { get; set; } = "TitleNotSet";
 
     public ReadOnlySeString Subtitle { get; set; } = string.Empty;
 
-    public required NativeController NativeController { get; init; }
+    public NativeController NativeController { get; init; }
 
     public int OpenWindowSoundEffectId { get; set; } = 23;
 

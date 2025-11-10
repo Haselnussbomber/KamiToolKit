@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 using FFXIVClientStructs.FFXIV.Component.GUI;
@@ -10,7 +10,8 @@ using KamiToolKit.Nodes;
 
 namespace KamiToolKit.Addons;
 
-public class ListConfigAddon<T, TU> : NativeAddon where TU : ConfigNode<T>, new() where T : class, IInfoNodeData {
+[AutoConstruct]
+public partial class ListConfigAddon<T, TU> : NativeAddon where TU : ConfigNode<T>, new() where T : class, IInfoNodeData {
 
     private ModifyListNode<T>? selectionListNode;
     private VerticalLineNode? separatorLine;

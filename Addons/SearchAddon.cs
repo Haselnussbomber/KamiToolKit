@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -14,7 +14,8 @@ namespace KamiToolKit.Addons;
 /// <summary>
 /// A generic window for selecting a single entry among a list of options.
 /// </summary>
-public class SearchAddon<T> : NativeAddon where T : IInfoNodeData {
+[AutoConstruct]
+public partial class SearchAddon<T> : NativeAddon where T : IInfoNodeData {
 
     private SearchWidget? searchWidget;
     private ScrollingAreaNode<VerticalListNode>? listNode;
