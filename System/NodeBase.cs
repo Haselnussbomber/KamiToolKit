@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using FFXIVClientStructs.FFXIV.Client.System.Memory;
@@ -146,6 +146,8 @@ public abstract unsafe class NodeBase<T> : NodeBase where T : unmanaged, ICreata
         if (InternalResNode is null) {
             throw new Exception($"Unable to allocate memory for {typeof(T)}");
         }
+
+        IsVisible = true;
 
         CreatedNodes.Add(this);
     }
